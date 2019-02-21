@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="club.wenfan.youtube.mapper.UserRoleMapper" >
+  <resultMap id="BaseResultMap" type="club.wenfan.youtube.bean.UserRole" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="role_id" property="roleId" jdbcType="INTEGER" />
+    <result column="authorized_date" property="authorizedDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+  <select id="getAuthenticationById" resultType="java.lang.String">
+
+    select role_id
+    from user_role
+    where user_id = #{id}
+
+  </select>
+
+
+
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="club.wenfan.youtube.mapper.SysUserMapper">
+  <resultMap id="BaseResultMap" type="club.wenfan.youtube.bean.SysUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="pwd" jdbcType="VARCHAR" property="pwd" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="openid" jdbcType="INTEGER" property="openid" />
+    <result column="province_id" jdbcType="INTEGER" property="provinceId" />
+    <result column="district_id" jdbcType="INTEGER" property="districtId" />
+    <result column="city_id" jdbcType="INTEGER" property="cityId" />
+    <result column="tel" jdbcType="VARCHAR" property="tel" />
+    <result column="user_type" jdbcType="INTEGER" property="userType" />
+    <result column="is_enabled" jdbcType="BIT" property="isEnabled" />
+    <result column="is_locked" jdbcType="BIT" property="isLocked" />
+    <result column="enable_data_role" jdbcType="BIT" property="enableDataRole" />
+    <result column="create_at" jdbcType="TIMESTAMP" property="createAt" />
+    <result column="login_last_date" jdbcType="TIMESTAMP" property="loginLastDate" />
+    <result column="login_last_ip" jdbcType="VARCHAR" property="loginLastIp" />
+  </resultMap>
+
+  <select id="getIdByUsername" resultType="java.lang.Integer">
+    select id
+    from sys_user
+    where username = #{username}
+  </select>
+</mapper>
