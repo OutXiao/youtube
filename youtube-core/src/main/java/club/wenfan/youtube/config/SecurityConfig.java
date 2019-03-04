@@ -96,7 +96,8 @@ public class SecurityConfig extends AbstractChannelSecurityConfig{
                         SecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX+"/*",
                         "/user/*",
                         "/users",
-                        "/static/*"
+                        "/static/*",
+                        "/admin/**"
                 ).permitAll()
                 .antMatchers("/test/*").hasRole("ADMIN")
                 .anyRequest()

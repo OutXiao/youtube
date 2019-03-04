@@ -6,6 +6,10 @@ spring:
     url: jdbc:mysql://localhost:3306/youtube??autoReconnect=true&useSSL=false
   session:
     store-type: redis
+  http:
+    multipart:
+      max-file-size: 300Mb #单个文件的大小
+      max-request-size: 600Mb #请求文件大小
 server:
   port: 8060
   session:
@@ -32,6 +36,13 @@ club:
         path: auth
         refresh: refresh
         register: auth/register
+      cos:
+        appid: 1256733317
+        secretId: AKIDGQSIxQavukPs9JKG1b1Nh1Mi3cYN6Wp5
+        SecretKey: IRo3SzQlu6DD2lNr9Qm3DUdcTI2Oo6oQ
+        bucket: youtube
+        area: ap-chengdu
+
 mybatis:
   mapperLocations: classpath*:club/wenfan/youtube/mapper/xml/*.xml
   type-aliases-package: club.wenfan.youtube.bean

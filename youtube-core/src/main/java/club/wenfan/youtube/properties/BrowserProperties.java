@@ -18,6 +18,7 @@ public class BrowserProperties {
     // 返回数据类型
     private LoginType loginType = LoginType.JSON;
 
+
     //记住我秒数
     private int rembermeSeconds = 60;
 

@@ -12,6 +12,8 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "club.wenfan.youtube")
 public class SecurityProperties {
 
+    private CosProperties cos = new CosProperties();
+
     private BrowserProperties browser = new BrowserProperties();
 
     private JwtProperties jwt = new JwtProperties();
@@ -40,5 +42,13 @@ public class SecurityProperties {
 
     public void setCode(ValidateCodeProperties code) {
         this.code = code;
+    }
+
+    public CosProperties getCos() {
+        return cos;
+    }
+
+    public void setCos(CosProperties cos) {
+        this.cos = cos;
     }
 }
