@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream</title>
+	<!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- Morris Chart Styles-->
+    <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+        <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+     <!-- Google Fonts-->
+   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<style type="text/css">
+	
+	
+	#tbody>tr{
+		text-align: center;
+	}
+	
+	
+</style>
+<body>
+    <div id="wrapper">
+ <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">云仓库管理系统</a>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>www.571696215@foxmail.com</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>上午</em>
+                                    </span>
+                                </div>
+                                <div>出库成功，货物已经拿到，下次还在你们这存</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>冯建强</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>昨天晚上</em>
+                                    </span>
+                                </div>
+                                <div>你们的服务太棒了，存储质量有保证，价格便宜</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>www.guwenfan.com</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>上午</em>
+                                    </span>
+                                </div>
+                                <div>出库成功，货物已经拿到，下次还在你们这存</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>查看所有</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>本月销售订单量</strong>
+                                        <span class="pull-right text-muted">60% 已完成</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>本月成交金额</strong>
+                                        <span class="pull-right text-muted">28% 已完成</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+                                            <span class="sr-only">28% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>本月服务目标商户数</strong>
+                                        <span class="pull-right text-muted">60% 已完成</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% 已完成</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>查看所有任务</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>	
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> 新的评论
+                                    <span class="pull-right text-muted small">4 分钟前</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 好友
+                                    <span class="pull-right text-muted small">12 分钟前</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> 新的邮件
+                                    <span class="pull-right text-muted small">4 分钟前</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> 新的任务
+                                    <span class="pull-right text-muted small">4 分钟前</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                      
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>查看所有</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> 用户配置</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> 设置</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i>  退出</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+        </nav>
+        <!--/. NAV TOP  -->
+ <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a href="index.html"><i class="fa fa-dashboard"></i>系统总预览</a>
+                    </li>
+                    <li>
+                        <a href="addMaterial.html"><i class="fa fa-upload"></i>入库管理</a>
+                    </li>
+                    <li>
+                        <a href="statistic.html"><i class="fa fa-bar-chart-o"></i>数据统计</a>
+                    </li>
+                    <li>
+                        <a href="outMaterial.html" ><i class="fa fa-download"></i> 出库管理</a>
+                    </li>
+                    <li>
+                        <a href="storage.html" class="active-menu"><i class="fa fa-bars"></i>库存管理</a>
+                    </li>
+                    <li>
+                        <a href="profit.html"><i class="fa fa-table"></i>利润统计</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><i class="fa fa-gears"></i> 设置<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                             <li>
+                        		<a href="repoSetting.html"><i class="fa fa-gear"></i>仓库设置</a>
+                    		</li>
+                        </ul>
+                        <ul class="nav nav-second-level">
+                            <li>
+                        		<a href="userSetting.html"><i class="fa fa-user"></i>员工设置</a>
+                    		</li>
+                        </ul>
+                        <ul class="nav nav-second-level">
+                            <li>
+                        		<a href="companyResume.html"><i class="fa fa-desktop"></i>公司简介设置</a>
+                    				</li>
+                        </ul>
+                    </li>
+ 						</ul>
+ 						</div>
+        </nav>
+        
+        <div id="page-wrapper" >
+            <div id="page-inner">
+			 <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            库存管理 <small></small>
+                        </h1>
+                    </div>
+                </div> 
+                 <!-- /. ROW  -->
+             
+                
+                <div class="col-md-9">
+                        <div class="panel panel-default">
+	                        <div class="panel-heading">
+	                            	库存预览 
+	                        </div>
+                       
+                        <div class="panel-body">
+                        	库存
+		                       <div class="progress progress-striped active">81.2%
+														  <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+														    <span class="sr-only">40% Complete (success)</span>
+														  </div>
+													</div>
+														入库量<div class="progress progress-striped active">18.8%
+															  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+															    <span class="sr-only">40% Complete (success)</span>
+															  </div>
+													</div>
+												
+                        </div>
+                        </div>
+                            
+                            
+                            
+                   </div> 
+                
+           
+                 
+                 
+                 
+                 <div class="row">
+                <div class="col-md-12">
+                    <!-- Advanced Tables -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             库存日志
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead id="thead">
+                                        <tr >
+                                            <th style="text-align: center;">货物名称</th>
+                                            <th style="text-align: center;">仓库号</th>
+                                            <th style="text-align: center;">入库时间</th>
+                                            <th style="text-align: center;">状态</th>
+                                            <th style="text-align: center;">存储费用</th>
+                                            <th style="text-align: center;">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody">
+                                        <tr class="odd gradeX">
+                                            <td>卫龙拉条200g</td>
+                                            <td>兰州-城关A仓</td>
+                                            <td>2018/12/21</td>
+                                            <td class="center">已入库</td>
+                                            <td class="center">8999,00.00</td>
+                                            <td class="center"> <a href="#" class="btn btn-primary btn-sm fa fa-edit">修改</a>
+                                            		  <a href="#" class="btn btn-danger btn-sm fa fa-pencil">删除</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>卫龙拉条200g</td>
+                                            <td>兰州-城关A仓</td>
+                                            <td>2018/12/21</td>
+                                            <td class="center">已入库</td>
+                                            <td class="center">8999,00.00</td>
+                                            <td class="center"> <a href="#" class="btn btn-primary btn-sm fa fa-edit">修改</a>
+                                            		  <a href="#" class="btn btn-danger btn-sm fa fa-pencil">删除</a>
+                                            </td>
+                                        </tr><tr class="odd gradeX">
+                                            <td>卫龙拉条200g</td>
+                                            <td>兰州-城关A仓</td>
+                                            <td>2018/12/21</td>
+                                            <td class="center">已出库</td>
+                                            <td class="center">8999,00.00</td>
+                                            <td class="center"> <a href="#" class="btn btn-primary btn-sm fa fa-edit">修改</a>
+                                            		  <a href="#" class="btn btn-danger btn-sm fa fa-pencil">删除</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>i7 7700k/1080 8G 主机</td>
+                                            <td>成都-A仓</td>
+                                            <td>2018/12/21</td>
+                                            <td class="center">已入库</td>
+                                            <td class="center">2999,00.00</td>
+                                            <td class="center"> <a href="#" class="btn btn-primary btn-sm fa fa-edit">修改</a>
+                                            		  <a href="#" class="btn btn-danger btn-sm fa fa-pencil">删除</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>i7 7700k/1080 8G 主机</td>
+                                            <td>成都-A仓</td>
+                                            <td>2018/12/21</td>
+                                            <td class="center">已入库</td>
+                                            <td class="center">2999,00.00</td>
+                                            <td class="center"> <a href="#" class="btn btn-primary btn-sm fa fa-edit">修改</a>
+                                            		  <a href="#" class="btn btn-danger btn-sm fa fa-pencil">删除</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>i7 7700k/1080 8G 主机</td>
+                                            <td>成都-A仓</td>
+                                            <td>2018/12/21</td>
+                                            <td class="center">已入库</td>
+                                            <td class="center">2999,00.00</td>
+                                            <td class="center"> <a href="#" class="btn btn-primary btn-sm fa fa-edit">修改</a>
+                                            		  <a href="#" class="btn btn-danger btn-sm fa fa-pencil">删除</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>i7 7700k/1080 8G 主机</td>
+                                            <td>成都-A仓</td>
+                                            <td>2018/12/21</td>
+                                            <td class="center">已入库</td>
+                                            <td class="center">2999,00.00</td>
+                                            <td class="center"> <a href="#" class="btn btn-primary btn-sm fa fa-edit">修改</a>
+                                            		  <a href="#" class="btn btn-danger btn-sm fa fa-pencil">删除</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>i7 7700k/1080 8G 主机</td>
+                                            <td>成都-A仓</td>
+                                            <td>2018/12/21</td>
+                                            <td class="center">已出库</td>
+                                            <td class="center">2999,00.00</td>
+                                            <td class="center"> <a href="#" class="btn btn-primary btn-sm fa fa-edit">修改</a>
+                                            		  <a href="#" class="btn btn-danger btn-sm fa fa-pencil">删除</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>i7 7700k/1080 8G 主机</td>
+                                            <td>成都-A仓</td>
+                                            <td>2018/12/21</td>
+                                            <td class="center">已出库</td>
+                                            <td class="center">2999,00.00</td>
+                                            <td class="center"> <a href="#" class="btn btn-primary btn-sm fa fa-edit">修改</a>
+                                            		  <a href="#" class="btn btn-danger btn-sm fa fa-pencil">删除</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>i7 7700k/1080 8G 主机</td>
+                                            <td>成都-A仓</td>
+                                            <td>2018/12/21</td>
+                                            <td class="center">已出库</td>
+                                            <td class="center">2999,00.00</td>
+                                            <td class="center"> <a href="#" class="btn btn-primary btn-sm fa fa-edit">修改</a>
+                                            		  <a href="#" class="btn btn-danger btn-sm fa fa-pencil">删除</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>i7 7700k/1080 8G 主机</td>
+                                            <td>成都-A仓</td>
+                                            <td>2018/12/21</td>
+                                            <td class="center">已入库</td>
+                                            <td class="center">2999,00.00</td>
+                                            <td class="center"> <a href="#" class="btn btn-primary btn-sm fa fa-edit">修改</a>
+                                            		  <a href="#" class="btn btn-danger btn-sm fa fa-pencil">删除</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>i7 7700k/1080 8G 主机</td>
+                                            <td>成都-A仓</td>
+                                            <td>2018/12/21</td>
+                                            <td class="center">已出库</td>
+                                            <td class="center">2999,00.00</td>
+                                            <td class="center"> <a href="#" class="btn btn-primary btn-sm fa fa-edit">修改</a>
+                                            		  <a href="#" class="btn btn-danger btn-sm fa fa-pencil">删除</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>i7 7700k/1080 8G 主机</td>
+                                            <td>成都-A仓</td>
+                                            <td>2018/12/21</td>
+                                            <td class="center">已出库</td>
+                                            <td class="center">2999,00.00</td>
+                                            <td class="center"> <a href="#" class="btn btn-primary btn-sm fa fa-edit">修改</a>
+                                            		  <a href="#" class="btn btn-danger btn-sm fa fa-pencil">删除</a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!--End Advanced Tables -->
+                </div>
+            </div>
+                 </div>
+                 
+                 
+                 
+                 
+                 <!-- /. ROW  -->
+				</div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
+     <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+     <!-- Morris Chart Js -->
+     <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/js/morris/morris.js"></script>
+      <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+    
+   
+</body>
+</html>

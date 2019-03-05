@@ -1,0 +1,182 @@
+﻿<style>
+    table
+    {
+        table-layout:fixed;
+    }
+</style>
+<!-- /. NAV SIDE  -->
+<div id="page-inner">
+    <div class="row1">
+        <div class="col-md-12">
+            <h1 class="page-header1">
+                视频管理
+                <small>Responsive tables</small>
+            </h1>
+        </div>
+    </div>
+    <!-- /. ROW  -->
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Advanced Tables -->
+            <div class="panel-body">
+                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    上传视频
+                </button>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel">添加视频</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form id="videoForm">
+                                    <div class="form-group">
+                                        <label>视频标题</label>
+                                        <input class="form-control" name="title" placeholder="请输入视频标题" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>视频封面</label>
+                                        <input type="file" name="cover" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>视频(mp4格式)</label>
+                                        <input type="file" name="video" required>
+                                        <span id="time"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>视频关键字(以,分开)</label>
+                                        <input class="form-control" name="keyword" placeholder="请输入关键字" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>视频描述</label>
+                                        <textarea class="form-control" rows="1" cols="10" name="description"
+                                                  placeholder="请输入视频描述" required></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>视频类别</label>
+                                        <select class="form-control" name="category_id">
+                                            <option value="1">搞笑</option>
+                                            <option value="2">音乐</option>
+                                            <option value="3">游戏</option>
+                                            <option value="4">体育</option>
+                                            <option value="5">生活</option>
+                                        </select>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                        <button type="button" class="btn btn-primary" id="addVideo">确定</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+                                </button>
+                                <h4 class="modal-title" id="myeditModalLabel">添加视频</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form id="editvideoForm">
+                                    <div class="form-group">
+                                        <label>视频标题</label>
+                                        <input class="form-control" name="title" placeholder="请输入视频标题" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>封面Url</label>
+                                        <input class="form-control" name="coverUrl" placeholder="请输入coverUrl">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>点赞数量</label>
+                                        <input class="form-control" name="likeSize" placeholder="请输入点赞数量">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>踩数量</label>
+                                        <input class="form-control" name="unLikeSize" placeholder="请输入踩数量">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                        <button type="button" class="btn btn-primary" id="editVideo">确定更改</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        所有视频
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table id="table" class="display" cellspacing="0" width="100%">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>用户名</th>
+                                    <th>视频标题</th>
+                                    <th>封面</th>
+                                    <th>赞</th>
+                                    <th>踩</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>用户名</th>
+                                    <th>视频标题</th>
+                                    <th>封面</th>
+                                    <th>赞</th>
+                                    <th>踩</th>
+                                    <th>操作</th>
+                                </tr>
+                                </tfoot>
+
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <!--End Advanced Tables -->
+            </div>
+        </div>
+
+    </div>
+    <!-- /. PAGE WRAPPER  -->
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- DATA TABLE SCRIPTS -->
+    <script src="assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
+    <script src="assets/js/dataTables/datatable.js"></script>
+    <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+
+    <script id="tpl" type="text/x-handlebars-template">
+        {{#each func}}
+        <button type="button" class="btn btn-{{this.type}} btn-sm" onclick="{{this.fn}}">{{this.name}}</button>
+        {{/each}}
+    </script>
+</div>
