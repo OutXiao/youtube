@@ -82,12 +82,11 @@ public class AuthServiceImpl implements AuthService {
          *
          */
         UsernamePasswordAuthenticationToken upToken = new UsernamePasswordAuthenticationToken(username,password);
-        System.out.println(1231);
         Authentication authentication = authenticationManagerBean.authenticate(upToken);
-        System.out.println(1111);
         SecurityContextHolder.getContext().setAuthentication(authentication);
         final UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-        String token = jwtTokenUtil.generateToken(userDetails);
+        String token;
+        token = jwtTokenUtil.generateToken(userDetails);
         return token;
     }
 
