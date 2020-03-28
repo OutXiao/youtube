@@ -38,8 +38,8 @@ club:
         register: auth/register
       cos:
         appid: 1256733317
-        secretId: AKIDGQSIxQavukPs9JKG1b1Nh1Mi3cYN6Wp5
-        SecretKey: IRo3SzQlu6DD2lNr9Qm3DUdcTI2Oo6oQ
+        secretId: *****
+        SecretKey: ******
         bucket: youtube
         area: ap-chengdu
 
